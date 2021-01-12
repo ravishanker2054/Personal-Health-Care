@@ -1,0 +1,61 @@
+<html>
+<head>
+<title> Disease prediction</title>
+<body>
+<form action="" target="result" onsubmit="myf()">
+<p><h1> Disease Predictor</h1></p>
+<br/>
+<h3> Tick all your Symptoms </h3>
+<input type="checkbox" id="dis" name="disease" value="Sneezing"> Sneezing
+<input type="checkbox" id="dis" name="disease" value="Low Fever"> Low Fever
+<br/> 
+<input type="checkbox" id="dis" name="disease" value="Headache"> Headache
+<input type="checkbox" id="dis" name="disease" value="Runny nose"> Runny nose
+<br/>
+<input type="checkbox" id="dis" name="disease" value="Body Aches"> Body Aches
+<input type="checkbox" id="dis" name="disease" value="Fatigue"> Fatigue
+<br/>
+<input type="checkbox" id="dis" name="disease" value="Congestion"> Congestion
+<input type="checkbox" id="dis" name="disease" value="Abdominal Pain"> Abdominal Pain
+<br/>
+<input type="checkbox" id="dis" name="disease" value="Blurred vision"> Blurred vision
+<input type="checkbox" id="dis" name="disease" value="Lose motion"> Lose motion
+<br/>
+<input type="checkbox" id="dis" name="disease" value="Paleness"> paleness
+<input type="checkbox" id="dis" name="disease" value="Frequent Urintaion"> Frequent Urination
+<br/>
+<input type="checkbox" id="dis" name="disease" value="Upset Stomach"> Upset Stomach
+<input type="checkbox" id="dis" name="disease" value="Weakness"> Weakness
+<br/>
+<input type="checkbox" id="dis" name="disease"  value="High Fever"> High Fever
+<input type="checkbox" id="dis" name="disease" value="Headache"> Weight Loss
+<br/>
+<input type="checkbox" id="dis" name="disease" value="Low BP"> Low BP
+<input type="checkbox" id="dis" name="disease" value="Yellow Skin"> Yellow Skin
+<button onclick="myFunction()">Try it</button>
+</form>
+<h3>Result:</h3>
+<fieldset style="height:100px;width:200px;"><span id="results"></span></fieldset>
+
+<script>
+function myFunction()
+{
+ var letter = document.getElementById("dis").value;
+  var text;
+   if (letter === "Sneezing") {
+    text = "Spot on! Good job!";
+    
+  // If the letter is "b" or "d"
+  } else if (letter === "b" || letter === "d") {
+    text = "Close, but not close enough.";
+    
+  // If the letter is anything else
+  } else {
+    text = "Waaay off..";
+  }
+  document.getElementById("demo").innerHTML = text;
+}
+
+</script>
+</body>
+</html>
